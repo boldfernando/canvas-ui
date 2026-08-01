@@ -1,0 +1,5 @@
+# Ignorar dados de estado local e sessões efêmeras do Antigravity
+.state/
+scratch/
+logs/
+tmp/
