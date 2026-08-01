@@ -1,4 +1,4 @@
-import { test as base, Page } from "@playwright/test";
+import { test as base } from "@playwright/test";
 
 export interface CanvasTestFixtures {
   canvasPage: {
@@ -95,10 +95,9 @@ export const test = base.extend<CanvasTestFixtures>({
 
       getJSHeapSize: async () => {
         return await page.evaluate(() => {
-          // @ts-ignore
-          if (window.performance && window.performance.memory) {
-            // @ts-ignore
-            return window.performance.memory.usedJSHeapSize;
+          const perf = window.performance as unknown as { memory?: { usedJSHeapSize: number } };
+          if (perf && perf.memory) {
+            return perf.memory.usedJSHeapSize;
           }
           return 0;
         });

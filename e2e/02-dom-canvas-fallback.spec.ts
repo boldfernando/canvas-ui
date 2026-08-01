@@ -21,8 +21,8 @@ test.describe("E2E-02: Cross-Browser & DOM-in-Canvas Fallback Resilience", () =>
   test("deve alternar suavemente para WebGL Overlay em navegadores sem a API experimental HTML-in-Canvas", async ({ page }) => {
     // Simula a ausência da API experimental no objeto window
     await page.addInitScript(() => {
-      // @ts-ignore
-      delete HTMLCanvasElement.prototype.drawFocusIfNeeded;
+      // @ts-expect-error - prototype property deletion for fallback testing
+      delete (HTMLCanvasElement.prototype as unknown as Record<string, unknown>).drawFocusIfNeeded;
     });
 
     await page.goto("/");
