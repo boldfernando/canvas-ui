@@ -5,12 +5,58 @@ export interface CanvasTestFixtures {
     freezeTime: () => Promise<void>;
     triggerWebGLContextLoss: (selector?: string) => Promise<boolean>;
     restoreWebGLContext: (selector?: string) => Promise<boolean>;
-    getFPSMetrics: (durationMs?: number) => Promise<{ avgFps: number; maxFrameTimeMs: number; p95FrameTimeMs: number }>;
+    getFPSMetrics: (durationMs?: number) => Promise<{ avgFps: number; maxFrameTimeMs: number; p95FrameTimeMs: number; sampleCount: number }>;
     getJSHeapSize: () => Promise<number>;
+  };
+  errorCollector: {
+    getErrors: () => Array<{ type: string; text: string; location?: string }>;
+    assertNoErrors: () => void;
   };
 }
 
 export const test = base.extend<CanvasTestFixtures>({
+  errorCollector: async ({ page }, use) => {
+    const collectedErrors: Array<{ type: string; text: string; location?: string }> = [];
+
+    page.on("console", (msg) => {
+      if (msg.type() === "error") {
+        collectedErrors.push({
+          type: "console.error",
+          text: msg.text(),
+          location: msg.location().url,
+        });
+      }
+    });
+
+    page.on("pageerror", (error) => {
+      collectedErrors.push({
+        type: "pageerror",
+        text: error.message,
+        location: error.stack,
+      });
+    });
+
+    page.on("requestfailed", (request) => {
+      const failure = request.failure();
+      collectedErrors.push({
+        type: "requestfailed",
+        text: `${request.method()} ${request.url()} - ${failure ? failure.errorText : "Failed"}`,
+      });
+    });
+
+    const collector = {
+      getErrors: () => [...collectedErrors],
+      assertNoErrors: () => {
+        if (collectedErrors.length > 0) {
+          const errList = collectedErrors.map((e) => `[${e.type}] ${e.text}`).join("\n");
+          throw new Error(`Erros globais não tratados capturados no browser:\n${errList}`);
+        }
+      },
+    };
+
+    await use(collector);
+  },
+
   canvasPage: async ({ page }, use) => {
     const helpers = {
       freezeTime: async () => {
@@ -57,7 +103,7 @@ export const test = base.extend<CanvasTestFixtures>({
 
       getFPSMetrics: async (durationMs = 2000) => {
         return await page.evaluate(async (duration) => {
-          return new Promise<{ avgFps: number; maxFrameTimeMs: number; p95FrameTimeMs: number }>((resolve) => {
+          return new Promise<{ avgFps: number; maxFrameTimeMs: number; p95FrameTimeMs: number; sampleCount: number }>((resolve, reject) => {
             const frameTimes: number[] = [];
             let lastTime = performance.now();
             let frameId: number;
@@ -76,7 +122,7 @@ export const test = base.extend<CanvasTestFixtures>({
             setTimeout(() => {
               cancelAnimationFrame(frameId);
               if (frameTimes.length === 0) {
-                resolve({ avgFps: 60, maxFrameTimeMs: 16.6, p95FrameTimeMs: 16.6 });
+                reject(new Error("NO_FRAME_SAMPLES: Nenhuma amostra de frame foi capturada durante a medição de FPS."));
                 return;
               }
               const totalTime = frameTimes.reduce((a, b) => a + b, 0);
@@ -87,7 +133,7 @@ export const test = base.extend<CanvasTestFixtures>({
               const p95FrameTimeMs = sorted[p95Index] || sorted[sorted.length - 1];
               const maxFrameTimeMs = sorted[sorted.length - 1];
 
-              resolve({ avgFps, maxFrameTimeMs, p95FrameTimeMs });
+              resolve({ avgFps, maxFrameTimeMs, p95FrameTimeMs, sampleCount: frameTimes.length });
             }, duration);
           });
         }, durationMs);
