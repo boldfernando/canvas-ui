@@ -103,14 +103,14 @@ const baselineSummaryMarkdown = `# 📊 Baseline Canônico de Evidências - Comm
 
 ---
 
-## 💻 Ambiente de Execução (`evidence/environment.json`)
+## 💻 Ambiente de Execução (\`evidence/environment.json\`)
 - **Node.js:** \`${process.version}\`
 - **Plataforma:** \`${process.platform} (${process.arch})\`
 - **Next.js:** \`16.2.10\`
 - **Playwright:** \`^1.50.0\`
 - **Porta do Servidor E2E:** \`3099\`
 
-## 📦 Inventário do Repositório (`evidence/inventory.json`)
+## 📦 Inventário do Repositório (\`evidence/inventory.json\`)
 - **Total de Itens no Registry:** \`${registryCount}\` itens em \`public/r/\`
 - **Componentes Únicos:** \`33\` componentes
 - **Alvos Multi-Framework:** \`6\` (React, Vue, Svelte, Solid, Preact, Vanilla JS)
