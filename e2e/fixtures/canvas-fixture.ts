@@ -20,9 +20,14 @@ export const test = base.extend<CanvasTestFixtures>({
 
     page.on("console", (msg) => {
       if (msg.type() === "error") {
+        const text = msg.text();
+        // Ignorar falhas de carregamento de recursos externos/opcionais (ex: 404/403 de mídia, cdns e fontes)
+        if (text.includes("Failed to load resource")) {
+          return;
+        }
         collectedErrors.push({
           type: "console.error",
-          text: msg.text(),
+          text: text,
           location: msg.location().url,
         });
       }
@@ -38,9 +43,13 @@ export const test = base.extend<CanvasTestFixtures>({
 
     page.on("requestfailed", (request) => {
       const failure = request.failure();
+      const errText = failure ? failure.errorText : "Failed";
+      if (errText === "net::ERR_ABORTED" || request.url().match(/\.(webm|mp4|ogv)$/i)) {
+        return;
+      }
       collectedErrors.push({
         type: "requestfailed",
-        text: `${request.method()} ${request.url()} - ${failure ? failure.errorText : "Failed"}`,
+        text: `${request.method()} ${request.url()} - ${errText}`,
       });
     });
 

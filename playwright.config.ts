@@ -93,7 +93,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: process.env.CI ? "npx next start -p 3099" : "npm run build && npx next start -p 3099",
+    command: process.env.CI ? "npx serve out -p 3099" : "npm run build && npx serve out -p 3099",
     url: "http://localhost:3099",
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000,

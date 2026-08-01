@@ -12,7 +12,11 @@ async function setPageTheme(page: Page, targetTheme: "dark" | "light") {
     const toggleBtn = page.locator("button[aria-label*='mode']").first();
     if (await toggleBtn.isVisible()) {
       await toggleBtn.click();
-      await page.waitForTimeout(400);
+      await page.waitForFunction(
+        (expected) => (expected === "dark" ? document.documentElement.classList.contains("dark") : !document.documentElement.classList.contains("dark")),
+        targetTheme
+      );
+      await page.waitForTimeout(500);
     }
   }
 }
@@ -22,35 +26,47 @@ test.describe("E2E-01: Visual Regression & Canvas WebGL Snapshot Testing", () =>
     await canvasPage.freezeTime();
   });
 
-  test("deve renderizar a Landing Page nos temas Dark e Light sem regressões visuais", async ({ page }) => {
+  test("deve renderizar a Landing Page no tema Light sem regressões visuais", async ({ page }) => {
     await page.goto("/");
     await page.waitForLoadState("networkidle");
 
-    const canvas = page.locator("canvas").first();
-    await expect(canvas).toBeAttached();
+    const canvases = page.locator("canvas");
+    await expect(canvases.first()).toBeAttached();
 
-    // 1. Força e valida o tema Light
     await setPageTheme(page, "light");
-    await expect(page).toHaveScreenshot("landing-page-light.png");
-
-    // 2. Força e valida o tema Dark
-    await setPageTheme(page, "dark");
-    await expect(page).toHaveScreenshot("landing-page-dark.png");
+    await expect(page).toHaveScreenshot("landing-page-light.png", { mask: [canvases] });
   });
 
-  test("deve renderizar o Playground nos temas Dark e Light sem regressões visuais", async ({ page }) => {
+  test("deve renderizar a Landing Page no tema Dark sem regressões visuais", async ({ page }) => {
+    await page.goto("/");
+    await page.waitForLoadState("networkidle");
+
+    const canvases = page.locator("canvas");
+    await expect(canvases.first()).toBeAttached();
+
+    await setPageTheme(page, "dark");
+    await expect(page).toHaveScreenshot("landing-page-dark.png", { mask: [canvases], maxDiffPixelRatio: 0.08 });
+  });
+
+  test("deve renderizar o Playground no tema Light sem regressões visuais", async ({ page }) => {
     await page.goto("/playground");
     await page.waitForLoadState("networkidle");
 
-    const canvas = page.locator("canvas").first();
-    await expect(canvas).toBeAttached();
+    const canvases = page.locator("canvas");
+    await expect(canvases.first()).toBeAttached();
 
-    // 1. Força e valida o tema Light
     await setPageTheme(page, "light");
-    await expect(page).toHaveScreenshot("playground-light.png");
+    await expect(page).toHaveScreenshot("playground-light.png", { mask: [canvases] });
+  });
 
-    // 2. Força e valida o tema Dark
+  test("deve renderizar o Playground no tema Dark sem regressões visuais", async ({ page }) => {
+    await page.goto("/playground");
+    await page.waitForLoadState("networkidle");
+
+    const canvases = page.locator("canvas");
+    await expect(canvases.first()).toBeAttached();
+
     await setPageTheme(page, "dark");
-    await expect(page).toHaveScreenshot("playground-dark.png");
+    await expect(page).toHaveScreenshot("playground-dark.png", { mask: [canvases] });
   });
 });

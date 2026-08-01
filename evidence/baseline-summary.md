@@ -1,7 +1,7 @@
-# 📊 Baseline Canônico de Evidências - Commit 69136d9e
+# 📊 Baseline Canônico de Evidências - Commit 56b17578
 
-> **Data de Geração:** 2026-08-01T20:13:56.821Z  
-> **Commit SHA:** `69136d9e067a8527b6f3cbe21331bb7681f08f4f`  
+> **Data de Geração:** 2026-08-01T20:27:25.121Z  
+> **Commit SHA:** `56b175785990d9412caccb90c1b199c3241b5d2b`  
 > **Branch:** `main`  
 > **Status Canônico Global:** 🟡 `AMBER`
 
