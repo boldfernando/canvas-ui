@@ -16,14 +16,18 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {},
+    "metadata": {
+      "actualWorkers": 16
+    },
     "preserveOutput": "always",
     "projects": [
       {
         "outputDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 16
+        },
         "id": "chromium-functional",
         "name": "chromium-functional",
         "testDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/e2e",
@@ -37,7 +41,9 @@
         "outputDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 16
+        },
         "id": "chromium-visual",
         "name": "chromium-visual",
         "testDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/e2e",
@@ -51,7 +57,9 @@
         "outputDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 16
+        },
         "id": "chromium-perf",
         "name": "chromium-perf",
         "testDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/e2e",
@@ -65,7 +73,9 @@
         "outputDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 16
+        },
         "id": "firefox-fallback",
         "name": "firefox-fallback",
         "testDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/e2e",
@@ -112,17 +122,752 @@
       "timeout": 120000
     }
   },
-  "suites": [],
-  "errors": [
+  "suites": [
     {
-      "message": "Error: Process from config.webServer was not able to start. Exit code: 1",
-      "stack": "Error: Process from config.webServer was not able to start. Exit code: 1"
+      "title": "02-dom-canvas-fallback.spec.ts",
+      "file": "02-dom-canvas-fallback.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "E2E-02: Cross-Browser & DOM-in-Canvas Fallback Resilience",
+          "file": "02-dom-canvas-fallback.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve manter botões e links clicáveis sob a camada de efeito Canvas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-functional",
+                  "projectName": "chromium-functional",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7033,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.016Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a688840c6ba0cbbc17a4-3f671cd5f3559e94aecd",
+              "file": "02-dom-canvas-fallback.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "deve alternar suavemente para WebGL Overlay em navegadores sem a API experimental HTML-in-Canvas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-functional",
+                  "projectName": "chromium-functional",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 8199,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.013Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a688840c6ba0cbbc17a4-de4a738ffca5bcf44e4d",
+              "file": "02-dom-canvas-fallback.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "deve manter botões e links clicáveis sob a camada de efeito Canvas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-fallback",
+                  "projectName": "firefox-fallback",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 12,
+                      "status": "passed",
+                      "duration": 9325,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.081Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a688840c6ba0cbbc17a4-7251eba3f85640274073",
+              "file": "02-dom-canvas-fallback.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "deve alternar suavemente para WebGL Overlay em navegadores sem a API experimental HTML-in-Canvas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-fallback",
+                  "projectName": "firefox-fallback",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 13,
+                      "status": "passed",
+                      "duration": 8440,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.103Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a688840c6ba0cbbc17a4-b6b209c66ba40d980ebe",
+              "file": "02-dom-canvas-fallback.spec.ts",
+              "line": 21,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "03-registry-cli.spec.ts",
+      "file": "03-registry-cli.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "E2E-03: Multi-Framework Registry & CLI Integrity",
+          "file": "03-registry-cli.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve servir o endpoint do registro principal public/r/registry.json com HTTP 200",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-functional",
+                  "projectName": "chromium-functional",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 52,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.009Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6f5d2792fe97f5630b92-58623c42abe81fde0e7f",
+              "file": "03-registry-cli.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "deve servir arquivos de componentes individuais no registro (ex: liquid.json)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-functional",
+                  "projectName": "chromium-functional",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 59,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.028Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6f5d2792fe97f5630b92-17963458d6dcd9326080",
+              "file": "03-registry-cli.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "deve servir o endpoint do registro principal public/r/registry.json com HTTP 200",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-fallback",
+                  "projectName": "firefox-fallback",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 14,
+                      "status": "passed",
+                      "duration": 35,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.097Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6f5d2792fe97f5630b92-593fdfa72ee431a6e2d3",
+              "file": "03-registry-cli.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "deve servir arquivos de componentes individuais no registro (ex: liquid.json)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-fallback",
+                  "projectName": "firefox-fallback",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 15,
+                      "status": "passed",
+                      "duration": 53,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.112Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6f5d2792fe97f5630b92-6bac693a62ffb39b5afd",
+              "file": "03-registry-cli.spec.ts",
+              "line": 14,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "05-webapp-playground.spec.ts",
+      "file": "05-webapp-playground.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "E2E-05: Web App Nav, Playground State & Accessibility",
+          "file": "05-webapp-playground.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve navegar entre as rotas principais (/docs, /components, /playground)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-functional",
+                  "projectName": "chromium-functional",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 9973,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.023Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "339f76b4218c1b2a4061-4a562630a32a9cc42f28",
+              "file": "05-webapp-playground.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "deve sincronizar o estado do Playground na URL",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-functional",
+                  "projectName": "chromium-functional",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 5504,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.024Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "339f76b4218c1b2a4061-8e3165d7cf3ab7a1b9ee",
+              "file": "05-webapp-playground.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "deve permitir a alternância de código entre os alvos de framework",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-functional",
+                  "projectName": "chromium-functional",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 6,
+                      "status": "passed",
+                      "duration": 5559,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.033Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "339f76b4218c1b2a4061-4d0c08a9d0d8c56c6bb2",
+              "file": "05-webapp-playground.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "deve navegar entre as rotas principais (/docs, /components, /playground)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-fallback",
+                  "projectName": "firefox-fallback",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 16715,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.669Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "339f76b4218c1b2a4061-85b533a7e7a25c066270",
+              "file": "05-webapp-playground.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "deve sincronizar o estado do Playground na URL",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-fallback",
+                  "projectName": "firefox-fallback",
+                  "results": [
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 8399,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.710Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "339f76b4218c1b2a4061-17c81fb239849b62b58e",
+              "file": "05-webapp-playground.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "deve permitir a alternância de código entre os alvos de framework",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-fallback",
+                  "projectName": "firefox-fallback",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 14,
+                      "status": "passed",
+                      "duration": 7548,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.174Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "339f76b4218c1b2a4061-d8a0fb4cbcfa9bb36b31",
+              "file": "05-webapp-playground.spec.ts",
+              "line": 30,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "01-visual-regression.spec.ts",
+      "file": "01-visual-regression.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "E2E-01: Visual Regression & Canvas WebGL Snapshot Testing",
+          "file": "01-visual-regression.spec.ts",
+          "line": 20,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve renderizar a Landing Page nos temas Dark e Light sem regressões visuais",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-visual",
+                  "projectName": "chromium-visual",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 7,
+                      "status": "passed",
+                      "duration": 9593,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.029Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "345bfaf8c3f4b5b7c1db-f20857793ebe9664d139",
+              "file": "01-visual-regression.spec.ts",
+              "line": 25,
+              "column": 7
+            },
+            {
+              "title": "deve renderizar o Playground nos temas Dark e Light sem regressões visuais",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-visual",
+                  "projectName": "chromium-visual",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 8,
+                      "status": "passed",
+                      "duration": 6483,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.032Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "345bfaf8c3f4b5b7c1db-5301d560d155c6e8e7d4",
+              "file": "01-visual-regression.spec.ts",
+              "line": 41,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "04-performance-fps-memory.spec.ts",
+      "file": "04-performance-fps-memory.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "E2E-04: Performance, FPS Budget & Memory Leak Auditing",
+          "file": "04-performance-fps-memory.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve manter o framerate dentro do orçamento de 60 FPS (P95 frame time <= 25ms)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-perf",
+                  "projectName": "chromium-perf",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 9,
+                      "status": "passed",
+                      "duration": 7719,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "📊 FPS Metrics - Avg FPS: 60.0, P95 Frame Time: 16.70ms\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.047Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "94c6beac8e979678ba08-eaaa32542f7b096c26a1",
+              "file": "04-performance-fps-memory.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "deve restaurar a cena visual após perda e recuperação do contexto WebGL",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-perf",
+                  "projectName": "chromium-perf",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 10,
+                      "status": "passed",
+                      "duration": 5483,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.059Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "94c6beac8e979678ba08-17583ec9760e0e84f32a",
+              "file": "04-performance-fps-memory.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "deve manter estabilidade do JS Heap ao navegar repetidamente entre páginas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-perf",
+                  "projectName": "chromium-perf",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 11,
+                      "status": "passed",
+                      "duration": 15242,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🧠 JS Heap Delta: 0.00 MB\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T19:55:44.071Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "94c6beac8e979678ba08-3bb98e1b34340428cdbd",
+              "file": "04-performance-fps-memory.spec.ts",
+              "line": 39,
+              "column": 7
+            }
+          ]
+        }
+      ]
     }
   ],
+  "errors": [],
   "stats": {
-    "startTime": "2026-08-01T19:54:14.965Z",
-    "duration": 3371.0370000000003,
-    "expected": 0,
+    "startTime": "2026-08-01T19:55:40.762Z",
+    "duration": 21778.092,
+    "expected": 19,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
