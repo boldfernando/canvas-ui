@@ -8,7 +8,8 @@ export default defineConfig({
   workers: process.env.CI ? 4 : undefined,
   reporter: [
     ["html", { open: "never" }],
-    ["list"]
+    ["list"],
+    ["json", { outputFile: "playwright-report/results.json" }]
   ],
   use: {
     baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || "http://localhost:3099",
@@ -25,7 +26,42 @@ export default defineConfig({
   },
   projects: [
     {
-      name: "chromium-webgl",
+      name: "chromium-functional",
+      testMatch: /.*(dom-canvas-fallback|registry-cli|webapp-playground).spec.ts/,
+      use: {
+        ...devices["Desktop Chrome"],
+        launchOptions: {
+          args: [
+            "--use-gl=angle",
+            "--use-angle=default",
+            "--ignore-gpu-blocklist",
+            "--enable-zero-copy",
+            "--enable-gpu-rasterization",
+            "--no-sandbox",
+          ],
+        },
+      },
+    },
+    {
+      name: "chromium-visual",
+      testMatch: /.*visual-regression.spec.ts/,
+      use: {
+        ...devices["Desktop Chrome"],
+        launchOptions: {
+          args: [
+            "--use-gl=angle",
+            "--use-angle=default",
+            "--ignore-gpu-blocklist",
+            "--enable-zero-copy",
+            "--enable-gpu-rasterization",
+            "--no-sandbox",
+          ],
+        },
+      },
+    },
+    {
+      name: "chromium-perf",
+      testMatch: /.*performance-fps-memory.spec.ts/,
       use: {
         ...devices["Desktop Chrome"],
         launchOptions: {
@@ -42,6 +78,7 @@ export default defineConfig({
     },
     {
       name: "firefox-fallback",
+      testMatch: /.*(dom-canvas-fallback|registry-cli|webapp-playground).spec.ts/,
       use: {
         ...devices["Desktop Firefox"],
       },

@@ -1,0 +1,130 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\fjuni\\Documents\\GitHub\\Jules-halls\\canvas-ui\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "C:\\Users\\fjuni\\Documents\\GitHub\\Jules-halls\\canvas-ui\\playwright.config.ts",
+    "rootDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium-functional",
+        "name": "chromium-functional",
+        "testDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*(dom-canvas-fallback|registry-cli|webapp-playground).spec.ts/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium-visual",
+        "name": "chromium-visual",
+        "testDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*visual-regression.spec.ts/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium-perf",
+        "name": "chromium-perf",
+        "testDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*performance-fps-memory.spec.ts/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox-fallback",
+        "name": "firefox-fallback",
+        "testDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*(dom-canvas-fallback|registry-cli|webapp-playground).spec.ts/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 16,
+    "webServer": {
+      "command": "npx next dev -p 3099",
+      "url": "http://localhost:3099",
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [],
+  "errors": [
+    {
+      "message": "Error: Process from config.webServer was not able to start. Exit code: 1",
+      "stack": "Error: Process from config.webServer was not able to start. Exit code: 1"
+    }
+  ],
+  "stats": {
+    "startTime": "2026-08-01T19:54:14.965Z",
+    "duration": 3371.0370000000003,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
