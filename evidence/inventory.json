@@ -1,27 +1,35 @@
 {
-  "inventory": {
-    "total_registry_items": 198,
-    "framework_targets": ["react", "vue", "svelte", "solid", "preact", "vanilla"],
-    "unique_components": 33,
-    "e2e_test_files": [
-      "e2e/01-visual-regression.spec.ts",
-      "e2e/02-dom-canvas-fallback.spec.ts",
-      "e2e/03-registry-cli.spec.ts",
-      "e2e/04-performance-fps-memory.spec.ts",
-      "e2e/05-webapp-playground.spec.ts"
-    ],
-    "test_projects": [
-      "chromium-functional",
-      "firefox-fallback",
-      "chromium-visual",
-      "chromium-perf",
-      "chromium-memory"
-    ],
-    "routes_covered": [
-      "/",
-      "/docs",
-      "/components",
-      "/playground"
-    ]
-  }
+  "commit": "69136d9e067a8527b6f3cbe21331bb7681f08f4f",
+  "branch": "main",
+  "total_registry_items": 199,
+  "framework_targets": [
+    "react",
+    "vue",
+    "svelte",
+    "solid",
+    "preact",
+    "vanilla"
+  ],
+  "unique_components": 33,
+  "e2e_test_files": [
+    "e2e/01-visual-regression.spec.ts",
+    "e2e/02-dom-canvas-fallback.spec.ts",
+    "e2e/03-registry-cli.spec.ts",
+    "e2e/04-performance-fps-memory.spec.ts",
+    "e2e/05-webapp-playground.spec.ts",
+    "e2e/06-accessibility.spec.ts"
+  ],
+  "test_projects": [
+    "chromium-functional",
+    "chromium-visual",
+    "chromium-perf",
+    "chromium-accessibility",
+    "firefox-fallback"
+  ],
+  "routes_covered": [
+    "/",
+    "/docs",
+    "/components",
+    "/playground"
+  ]
 }
