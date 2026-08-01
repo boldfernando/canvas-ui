@@ -9,7 +9,7 @@ export default defineConfig({
   reporter: [
     ["html", { open: "never" }],
     ["list"],
-    ["json", { outputFile: "playwright-report/results.json" }]
+    ["json", { outputFile: "playwright-report/results.json" }],
   ],
   use: {
     baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || "http://localhost:3099",
@@ -19,8 +19,8 @@ export default defineConfig({
   },
   expect: {
     toHaveScreenshot: {
-      maxDiffPixelRatio: 0.08,
-      threshold: 0.2,
+      maxDiffPixelRatio: 0.02,
+      threshold: 0.1,
       animations: "disabled",
     },
   },
@@ -62,6 +62,7 @@ export default defineConfig({
     {
       name: "chromium-perf",
       testMatch: /.*performance-fps-memory.spec.ts/,
+      fullyParallel: false,
       use: {
         ...devices["Desktop Chrome"],
         launchOptions: {
@@ -77,6 +78,13 @@ export default defineConfig({
       },
     },
     {
+      name: "chromium-accessibility",
+      testMatch: /.*accessibility.spec.ts/,
+      use: {
+        ...devices["Desktop Chrome"],
+      },
+    },
+    {
       name: "firefox-fallback",
       testMatch: /.*(dom-canvas-fallback|registry-cli|webapp-playground).spec.ts/,
       use: {
@@ -85,7 +93,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npx next dev -p 3099",
+    command: process.env.CI ? "npx next start -p 3099" : "npm run build && npx next start -p 3099",
     url: "http://localhost:3099",
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000,

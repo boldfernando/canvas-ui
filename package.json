@@ -17,7 +17,8 @@
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:debug": "playwright test --debug",
     "test:registry": "node --experimental-strip-types scripts/test-registry-e2e.mts",
-    "test:cli-consumer": "node --experimental-strip-types scripts/test-cli-consumer-e2e.mts"
+    "test:cli-consumer": "node --experimental-strip-types scripts/test-cli-consumer-e2e.mts",
+    "baseline": "node --experimental-strip-types scripts/generate-baseline.mts"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",
@@ -40,11 +41,12 @@
     "tw-animate-css": "^1.4.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.50.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@playwright/test": "^1.50.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
     "preact": "^10.25.4",
