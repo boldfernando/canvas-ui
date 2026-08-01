@@ -76,6 +76,22 @@
         "metadata": {
           "actualWorkers": 16
         },
+        "id": "chromium-accessibility",
+        "name": "chromium-accessibility",
+        "testDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*accessibility.spec.ts/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 16
+        },
         "id": "firefox-fallback",
         "name": "firefox-fallback",
         "testDir": "C:/Users/fjuni/Documents/GitHub/Jules-halls/canvas-ui/e2e",
@@ -116,7 +132,7 @@
     "version": "1.62.1",
     "workers": 16,
     "webServer": {
-      "command": "npx next dev -p 3099",
+      "command": "npm run build && npx serve out -p 3099",
       "url": "http://localhost:3099",
       "reuseExistingServer": true,
       "timeout": 120000
@@ -152,12 +168,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7033,
+                      "duration": 1978,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.016Z",
+                      "startTime": "2026-08-01T20:27:04.449Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -186,12 +202,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 8199,
+                      "duration": 2414,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.013Z",
+                      "startTime": "2026-08-01T20:27:04.440Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -217,15 +233,15 @@
                   "projectName": "firefox-fallback",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 12,
+                      "workerIndex": 14,
+                      "parallelIndex": 14,
                       "status": "passed",
-                      "duration": 9325,
+                      "duration": 3739,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.081Z",
+                      "startTime": "2026-08-01T20:27:04.552Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -251,15 +267,15 @@
                   "projectName": "firefox-fallback",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 13,
+                      "workerIndex": 15,
+                      "parallelIndex": 15,
                       "status": "passed",
-                      "duration": 8440,
+                      "duration": 2864,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.103Z",
+                      "startTime": "2026-08-01T20:27:04.519Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -305,12 +321,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 52,
+                      "duration": 44,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.009Z",
+                      "startTime": "2026-08-01T20:27:04.432Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -339,12 +355,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 59,
+                      "duration": 55,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.028Z",
+                      "startTime": "2026-08-01T20:27:04.426Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -370,15 +386,15 @@
                   "projectName": "firefox-fallback",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 14,
+                      "workerIndex": 16,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 35,
+                      "duration": 232,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.097Z",
+                      "startTime": "2026-08-01T20:27:05.317Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -404,15 +420,15 @@
                   "projectName": "firefox-fallback",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 15,
+                      "workerIndex": 17,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 53,
+                      "duration": 347,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.112Z",
+                      "startTime": "2026-08-01T20:27:05.320Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -458,12 +474,12 @@
                       "workerIndex": 4,
                       "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 9973,
+                      "duration": 3702,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.023Z",
+                      "startTime": "2026-08-01T20:27:04.451Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -492,12 +508,12 @@
                       "workerIndex": 5,
                       "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 5504,
+                      "duration": 1988,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.024Z",
+                      "startTime": "2026-08-01T20:27:04.453Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -526,12 +542,12 @@
                       "workerIndex": 6,
                       "parallelIndex": 6,
                       "status": "passed",
-                      "duration": 5559,
+                      "duration": 1740,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.033Z",
+                      "startTime": "2026-08-01T20:27:04.472Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -560,12 +576,12 @@
                       "workerIndex": 16,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 16715,
+                      "duration": 3392,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.669Z",
+                      "startTime": "2026-08-01T20:27:05.601Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -594,12 +610,12 @@
                       "workerIndex": 17,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 8399,
+                      "duration": 2985,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.710Z",
+                      "startTime": "2026-08-01T20:27:05.716Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -625,15 +641,15 @@
                   "projectName": "firefox-fallback",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 14,
+                      "workerIndex": 18,
+                      "parallelIndex": 6,
                       "status": "passed",
-                      "duration": 7548,
+                      "duration": 2608,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.174Z",
+                      "startTime": "2026-08-01T20:27:08.235Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -660,11 +676,11 @@
         {
           "title": "E2E-01: Visual Regression & Canvas WebGL Snapshot Testing",
           "file": "01-visual-regression.spec.ts",
-          "line": 20,
+          "line": 24,
           "column": 6,
           "specs": [
             {
-              "title": "deve renderizar a Landing Page nos temas Dark e Light sem regressões visuais",
+              "title": "deve renderizar a Landing Page no tema Light sem regressões visuais",
               "ok": true,
               "tags": [],
               "tests": [
@@ -679,12 +695,12 @@
                       "workerIndex": 7,
                       "parallelIndex": 7,
                       "status": "passed",
-                      "duration": 9593,
+                      "duration": 3299,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.029Z",
+                      "startTime": "2026-08-01T20:27:04.481Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -692,13 +708,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "345bfaf8c3f4b5b7c1db-f20857793ebe9664d139",
+              "id": "345bfaf8c3f4b5b7c1db-c59311de97f226d1ad78",
               "file": "01-visual-regression.spec.ts",
-              "line": 25,
+              "line": 29,
               "column": 7
             },
             {
-              "title": "deve renderizar o Playground nos temas Dark e Light sem regressões visuais",
+              "title": "deve renderizar a Landing Page no tema Dark sem regressões visuais",
               "ok": true,
               "tags": [],
               "tests": [
@@ -713,12 +729,12 @@
                       "workerIndex": 8,
                       "parallelIndex": 8,
                       "status": "passed",
-                      "duration": 6483,
+                      "duration": 4641,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.032Z",
+                      "startTime": "2026-08-01T20:27:04.507Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -726,9 +742,77 @@
                   "status": "expected"
                 }
               ],
-              "id": "345bfaf8c3f4b5b7c1db-5301d560d155c6e8e7d4",
+              "id": "345bfaf8c3f4b5b7c1db-392a74bace001cc987fc",
               "file": "01-visual-regression.spec.ts",
-              "line": 41,
+              "line": 40,
+              "column": 7
+            },
+            {
+              "title": "deve renderizar o Playground no tema Light sem regressões visuais",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-visual",
+                  "projectName": "chromium-visual",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 9,
+                      "status": "passed",
+                      "duration": 2652,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T20:27:04.504Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "345bfaf8c3f4b5b7c1db-b64e035752e1bf91a57b",
+              "file": "01-visual-regression.spec.ts",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "deve renderizar o Playground no tema Dark sem regressões visuais",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-visual",
+                  "projectName": "chromium-visual",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 10,
+                      "status": "passed",
+                      "duration": 3942,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T20:27:04.535Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "345bfaf8c3f4b5b7c1db-ffe7e9e031cc1bebb2e4",
+              "file": "01-visual-regression.spec.ts",
+              "line": 62,
               "column": 7
             }
           ]
@@ -761,10 +845,10 @@
                   "projectName": "chromium-perf",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 9,
+                      "workerIndex": 11,
+                      "parallelIndex": 11,
                       "status": "passed",
-                      "duration": 7719,
+                      "duration": 4107,
                       "errors": [],
                       "stdout": [
                         {
@@ -773,7 +857,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.047Z",
+                      "startTime": "2026-08-01T20:27:04.537Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -799,15 +883,15 @@
                   "projectName": "chromium-perf",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 10,
+                      "workerIndex": 11,
+                      "parallelIndex": 11,
                       "status": "passed",
-                      "duration": 5483,
+                      "duration": 1298,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.059Z",
+                      "startTime": "2026-08-01T20:27:08.889Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -836,7 +920,7 @@
                       "workerIndex": 11,
                       "parallelIndex": 11,
                       "status": "passed",
-                      "duration": 15242,
+                      "duration": 6801,
                       "errors": [],
                       "stdout": [
                         {
@@ -845,7 +929,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-01T19:55:44.071Z",
+                      "startTime": "2026-08-01T20:27:10.199Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -861,13 +945,98 @@
           ]
         }
       ]
+    },
+    {
+      "title": "06-accessibility.spec.ts",
+      "file": "06-accessibility.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "E2E-07: Automated Accessibility & Reduced Motion Audit (WCAG 2.1 AA)",
+          "file": "06-accessibility.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve garantir zero violações críticas de acessibilidade na Landing Page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-accessibility",
+                  "projectName": "chromium-accessibility",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 12,
+                      "status": "passed",
+                      "duration": 3509,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T20:27:04.606Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fef7e8b574ed39babde0-2a45696813df6a863615",
+              "file": "06-accessibility.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "deve aplicar suporte a prefers-reduced-motion desativando animações pesadas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-accessibility",
+                  "projectName": "chromium-accessibility",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 13,
+                      "status": "passed",
+                      "duration": 3513,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-01T20:27:04.593Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fef7e8b574ed39babde0-93db1912980e81d324f3",
+              "file": "06-accessibility.spec.ts",
+              "line": 22,
+              "column": 7
+            }
+          ]
+        }
+      ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-01T19:55:40.762Z",
-    "duration": 21778.092,
-    "expected": 19,
+    "startTime": "2026-08-01T20:26:37.985Z",
+    "duration": 39634.045000000006,
+    "expected": 23,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
