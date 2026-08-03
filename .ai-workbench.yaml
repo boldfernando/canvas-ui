@@ -1,0 +1,66 @@
+schemaVersion: "1.0.0"
+
+unit:
+  id: "canvas-ui"
+  name: "Jules Halls Canvas UI Core"
+  type: "repository"
+  path: "./canvas-ui"
+  owner: "platform-ui"
+  criticality: "high"
+  lifecycle: "active"
+
+architecture:
+  role: "visual-core"
+  allowedDependencies:
+    - "@jules-halls/contracts"
+    - "@jules-halls/design-tokens"
+  forbiddenDependencies:
+    - "apps/web-cockpit/src"
+    - "jules-sdk/src"
+    - "stitch-sdk/src"
+
+upstream:
+  managed: true
+  manifestEntry: "canvas-ui"
+  compatibilityRequired: true
+
+commands:
+  install: "pnpm install"
+  lint: "pnpm lint"
+  typecheck: "pnpm typecheck"
+  test: "pnpm test"
+  build: "pnpm build"
+  endToEnd: "pnpm test:e2e"
+
+gates:
+  required:
+    - boundaries
+    - contracts
+    - typecheck
+    - tests
+    - accessibility
+    - visual-regression
+    - security
+    - build
+
+evidence:
+  required: true
+  visualRequired: true
+  retentionDays: 180
+  redactLocalPaths: true
+  redactSecrets: true
+
+agents:
+  allowed:
+    - jules
+    - codex
+    - antigravity
+  humanApproval:
+    destructiveChanges: true
+    release: true
+    upstreamMigration: true
+
+security:
+  dataClassification: "internal"
+  secretsAllowed: false
+  productionDataAllowed: false
