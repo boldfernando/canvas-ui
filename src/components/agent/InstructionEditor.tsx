@@ -30,7 +30,7 @@ export const InstructionEditor: React.FC<InstructionEditorProps> = ({
         <Button variant="outline" size="sm" onClick={() => setValue(initialValue)}>
           Reset
         </Button>
-        <Button variant="primary" size="sm" onClick={() => onSave?.(value)}>
+        <Button variant="default" size="sm" onClick={() => onSave?.(value)}>
           Save Instructions
         </Button>
       </div>
