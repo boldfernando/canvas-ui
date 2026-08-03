@@ -13,7 +13,7 @@ export interface PlaygroundDemo {
   Component: DemoComponent;
 }
 
-type DemoComponent = ComponentType<{ children?: ReactNode }>;
+type DemoComponent = any;
 
 function Skeleton() {
   return (
@@ -26,8 +26,8 @@ function Skeleton() {
   );
 }
 
-const load = (loader: () => Promise<ComponentType<never>>) =>
-  dynamic(() => loader() as Promise<DemoComponent>, {
+const load = (loader: () => Promise<any>) =>
+  dynamic<{ children?: ReactNode }>(loader, {
     ssr: false,
     loading: () => <Skeleton />,
   });

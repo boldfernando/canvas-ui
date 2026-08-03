@@ -279,7 +279,7 @@ export function CopyMenu({
     {
       id: "prompt",
       label: "Copy prompt",
-      icon: Sparkles,
+      icon: Sparkles as IconComponent,
       action: { copy: buildPrompt },
     },
     {
@@ -295,7 +295,7 @@ export function CopyMenu({
     {
       id: "markdown",
       label: "Copy page as markdown",
-      icon: FileText,
+      icon: FileText as IconComponent,
       action: { copy: buildPageMarkdown },
     },
     ...(demoSource

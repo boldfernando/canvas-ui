@@ -35,7 +35,7 @@ import { cn } from "@/lib/utils";
 
 const SITE_URL = "https://canvasui.dev";
 
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
+type IconComponent = any;
 
 function XIcon(props: SVGProps<SVGSVGElement>) {
   return (

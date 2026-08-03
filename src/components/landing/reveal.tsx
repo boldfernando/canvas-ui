@@ -40,7 +40,7 @@ export function Reveal({
 
   return (
     <Tag
-      ref={ref as React.Ref<never>}
+      ref={ref as any}
       className={cn("reveal", className)}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >

@@ -19,7 +19,13 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@jules-halls/contracts": ["../packages/contracts/src/index.ts"],
+      "@jules-halls/contracts/*": ["../packages/contracts/src/*"],
+      "@jules-halls/design-tokens": ["../packages/design-tokens/src/index.ts"],
+      "@jules-halls/design-tokens/*": ["../packages/design-tokens/src/*"],
+      "@jules-halls/ui": ["../packages/ui/src/index.ts"],
+      "@jules-halls/ui/*": ["../packages/ui/src/*"]
     }
   },
   "include": [
