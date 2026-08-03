@@ -12,6 +12,8 @@ interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
   alt?: string;
   /** Fallback text (typically initials) when image fails */
   fallback?: string;
+  /** Alias for fallback initials */
+  initials?: string;
   /** Size variant */
   size?: "xs" | "sm" | "default" | "lg" | "xl";
   /** Online/offline status dot */
@@ -38,11 +40,13 @@ function Avatar({
   src,
   alt = "",
   fallback,
+  initials,
   size = "default",
   status,
   ...props
 }: AvatarProps) {
   const sizeTokens = SIZE_MAP[size];
+  const displayFallback = initials ?? fallback ?? alt?.charAt(0)?.toUpperCase() ?? "?";
 
   return (
     <div
@@ -65,7 +69,7 @@ function Avatar({
         />
       ) : (
         <span className={cn("font-medium text-muted-foreground select-none", sizeTokens.text)}>
-          {fallback ?? alt?.charAt(0)?.toUpperCase() ?? "?"}
+          {displayFallback}
         </span>
       )}
       {status && (
