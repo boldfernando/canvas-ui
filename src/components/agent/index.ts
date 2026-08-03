@@ -38,3 +38,36 @@ export type { APIKeyManagerProps, APIKeyRecord } from "./APIKeyManager";
 
 export { CIFixerPanel } from "./CIFixerPanel";
 export type { CIFixerPanelProps, CIFailure } from "./CIFixerPanel";
+
+export { InteractionModeSelector } from "./InteractionModeSelector";
+export type { InteractionModeSelectorProps, InteractionMode } from "./InteractionModeSelector";
+
+export { HumanMessage } from "./HumanMessage";
+export type { HumanMessageProps } from "./HumanMessage";
+
+export { AgentMessage } from "./AgentMessage";
+export type { AgentMessageProps } from "./AgentMessage";
+
+export { ConversationInputBox } from "./ConversationInputBox";
+export type { ConversationInputBoxProps } from "./ConversationInputBox";
+
+export { MCPToolOutput } from "./MCPToolOutput";
+export type { MCPToolOutputProps } from "./MCPToolOutput";
+
+export { CriticReviewCard } from "./CriticReviewCard";
+export type { CriticReviewCardProps } from "./CriticReviewCard";
+
+export { FeedbackThumbsButton } from "./FeedbackThumbsButton";
+export type { FeedbackThumbsButtonProps } from "./FeedbackThumbsButton";
+
+export { MarkdownViewer } from "./MarkdownViewer";
+export type { MarkdownViewerProps } from "./MarkdownViewer";
+
+export { BannerAlert } from "./BannerAlert";
+export type { BannerAlertProps } from "./BannerAlert";
+
+export { ContinuousIntegrationFixerView } from "./ContinuousIntegrationFixerView";
+export type { ContinuousIntegrationFixerViewProps } from "./ContinuousIntegrationFixerView";
+
+export { MCPRegistryPage } from "./MCPRegistryPage";
+export type { MCPRegistryPageProps, MCPServerRecord } from "./MCPRegistryPage";
