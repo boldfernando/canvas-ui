@@ -127,6 +127,79 @@
   --artifact-glacial-blue: #38BDF8;
 }
 
+/* ═══════════════════════════════════════════════════════════
+   T10 — High Contrast Theme (WCAG AAA: ≥7:1 contrast ratio)
+   Applied via class="high-contrast" on <html>
+   ═══════════════════════════════════════════════════════════ */
+.high-contrast {
+  --background: #000000;
+  --foreground: #FFFFFF;
+  --card: #0A0A0A;
+  --card-foreground: #FFFFFF;
+  --popover: #0A0A0A;
+  --popover-foreground: #FFFFFF;
+  --primary: #818CF8;
+  --primary-foreground: #000000;
+  --secondary: #1A1A1A;
+  --secondary-foreground: #FFFFFF;
+  --muted: #1A1A1A;
+  --muted-foreground: #D1D5DB;
+  --accent: #22D3EE;
+  --accent-foreground: #000000;
+  --destructive: #FF6B6B;
+  --border: rgba(255, 255, 255, 0.3);
+  --input: rgba(255, 255, 255, 0.35);
+  --ring: #818CF8;
+  --chart-1: #818CF8;
+  --chart-2: #22D3EE;
+  --chart-3: #34D399;
+  --chart-4: #FBBF24;
+  --chart-5: #FB7185;
+  --sidebar: #000000;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #818CF8;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #1A1A1A;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(255, 255, 255, 0.3);
+  --sidebar-ring: #818CF8;
+
+  /* HC Brand — brighter for pure black backgrounds */
+  --jules-electric-violet: #818CF8;
+  --stitch-spectral-cyan: #22D3EE;
+  --operational-green: #34D399;
+  --luminous-amber: #FBBF24;
+  --thermal-red: #FF6B6B;
+  --human-coral: #FB7185;
+  --artifact-glacial-blue: #7DD3FC;
+}
+
+/* High contrast focus rings: thicker, double-border */
+.high-contrast :focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* High contrast borders: thicker for visibility */
+.high-contrast [data-slot="card"],
+.high-contrast [data-slot="panel"],
+.high-contrast [data-slot="input"] {
+  border-width: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Light Theme Brand Variables (Jules Halls)
+   ═══════════════════════════════════════════════════════════ */
+:root {
+  --jules-electric-violet: #4F46E5;
+  --stitch-spectral-cyan: #0891B2;
+  --operational-green: #059669;
+  --luminous-amber: #D97706;
+  --thermal-red: #DC2626;
+  --human-coral: #E11D48;
+  --artifact-glacial-blue: #0284C7;
+}
+
 /* Densidade Operacional */
 .density-compact {
   --density-padding-y: 0.25rem;
