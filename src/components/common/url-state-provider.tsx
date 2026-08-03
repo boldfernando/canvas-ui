@@ -48,5 +48,5 @@ export function UrlStateProvider({ children }: { children: ReactNode }) {
     deferHistorySyncForNextRouter();
   }, []);
 
-  return <NuqsAdapter>{children}</NuqsAdapter>;
+  return <NuqsAdapter>{children as any}</NuqsAdapter>;
 }

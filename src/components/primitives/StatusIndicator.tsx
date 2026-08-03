@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { CanonicalState } from "@/lib/design-tokens";
+import { CanonicalState } from "@jules-halls/design-tokens";
 
 export interface StatusIndicatorProps extends React.HTMLAttributes<HTMLDivElement> {
   state: CanonicalState;

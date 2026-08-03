@@ -4,7 +4,7 @@
  * Enables declarative state communication in components via [data-state="..."].
  */
 
-import type { CanonicalState } from "@/lib/design-tokens";
+import type { CanonicalState } from "@jules-halls/design-tokens";
 
 // ─────────────────────────────────────────────────────────
 // 1. data-attribute adapters
