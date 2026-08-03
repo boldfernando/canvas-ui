@@ -18,8 +18,9 @@
 /prompts
 AGENTS.md
 
-# next.js
+# next.js & turbo
 /.next/
+/.turbo/
 /out/
 
 # production
@@ -61,3 +62,5 @@ cloudflare-env.d.ts
 
 # generated shadcn registry (built by scripts/build-registry.mts on prebuild)
 /public/r/
+
+.turbo/
