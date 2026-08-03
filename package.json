@@ -2,6 +2,15 @@
   "name": "canvasui",
   "version": "0.1.0",
   "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./primitives": "./src/components/primitives/index.ts",
+    "./agent": "./src/components/agent/index.ts",
+    "./code": "./src/components/code/index.ts",
+    "./tokens": "./src/lib/design-tokens.ts",
+    "./contracts": "./src/lib/contracts.ts",
+    "./state-adapters": "./src/lib/state-adapters.ts"
+  },
   "scripts": {
     "dev": "npm run registry && next dev",
     "registry": "node --experimental-strip-types scripts/build-registry.mts",
