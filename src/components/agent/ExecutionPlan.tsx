@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { CanonicalPlan } from "@/lib/contracts";
+import { CanonicalPlan } from "@jules-halls/contracts";
 import { CanonicalCard } from "../primitives/CanonicalCard";
 import { StatusIndicator } from "../primitives/StatusIndicator";
 
@@ -33,7 +33,7 @@ export const ExecutionPlan: React.FC<ExecutionPlanProps> = ({
 
       {/* Lista de Passos */}
       <div className="space-y-2 mb-4">
-        {plan.steps.map((step, idx) => (
+        {plan.steps.map((step: any, idx: number) => (
           <div
             key={step.id}
             className="p-3 rounded-lg bg-[#0B0F19] border border-white/5 flex flex-col gap-1 text-sm"
